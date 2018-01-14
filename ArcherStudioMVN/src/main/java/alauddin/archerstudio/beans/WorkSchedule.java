@@ -2,8 +2,16 @@ package alauddin.archerstudio.beans;
 
 public class WorkSchedule {
 	
-	String sun, mon, tue, wed, thu, fri, sat;
+	String username, sun, mon, tue, wed, thu, fri, sat;
 
+	public String getUsername() {
+		return username;
+	}
+	
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	
 	public String getSun() {
 		return sun;
 	}
