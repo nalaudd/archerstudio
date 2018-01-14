@@ -1,16 +1,23 @@
 package alauddin.archerstudio.beans;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+@Entity
 public class WorkSchedule {
 	
-	String username, sun, mon, tue, wed, thu, fri, sat;
-
-	public String getUsername() {
-		return username;
-	}
+	@Id
+	@SequenceGenerator(sequenceName="WS_SEQ", name="WS_SEQ")
+    @GeneratedValue(generator="WS_SEQ", strategy=GenerationType.SEQUENCE)
+	private int userId;
 	
-	public void setUsername(String username) {
-		this.username = username;
-	}
+	@Column
+	private String sun, mon, tue, wed, thu, fri, sat;
+
 	
 	public String getSun() {
 		return sun;

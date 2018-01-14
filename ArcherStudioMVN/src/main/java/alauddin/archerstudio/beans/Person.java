@@ -2,17 +2,36 @@ package alauddin.archerstudio.beans;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Person")
 public class Person {
 	
-	String username, fname, lname;
-	int age;
-	Date birthday;
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
+	@Id
+	@SequenceGenerator(sequenceName="PERSON_SEQ", name="PERSON_SEQ")
+    @GeneratedValue(generator="PERSON_SEQ", strategy=GenerationType.SEQUENCE)
+	private int userId;
+	
+	@Column
+	private String fname;
+	
+	@Column
+	private String lname;
+	
+	@Column
+	private int age;
+	
+	@Column
+	private Date birthday;
+	
+	
 	public String getFname() {
 		return fname;
 	}

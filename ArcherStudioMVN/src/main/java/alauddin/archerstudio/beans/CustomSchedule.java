@@ -1,14 +1,29 @@
 package alauddin.archerstudio.beans;
 
-public class CustomSchedule {
-	String username, sun, mon, tue, wed, thu, fri, sat;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
-	public String getUsername() {
-		return username;
+@Entity
+public class CustomSchedule {
+	
+	@Id
+	@SequenceGenerator(sequenceName="CS_SEQ", name="CS_SEQ")
+    @GeneratedValue(generator="CS_SEQ", strategy=GenerationType.SEQUENCE)
+	private int userId;
+	
+	@Column
+	private String sun, mon, tue, wed, thu, fri, sat;
+
+	public int getUserId() {
+		return userId;
 	}
 	
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserId(int username) {
+		this.userId = username;
 	}
 	
 	public String getSun() {
