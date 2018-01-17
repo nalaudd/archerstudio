@@ -1,9 +1,7 @@
 package alauddin.archerstudio.javaTests;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 import alauddin.archerstudio.beans.CustomSchedule;
 import alauddin.archerstudio.beans.Person;
@@ -18,12 +16,13 @@ public class CreateTablesTest {
 		Transaction tx = null;
 		User user = new User();
 		
-		user.setUsername("gherman");
-		user.setPassword("zeitgeist");
+		user.setUsername("anavarre");
+		user.setPassword("scryspc");
 		user.setCs(new CustomSchedule());
 		user.setWs(new WorkSchedule());
 		user.setPerson(new Person());
-		
+		user.getPerson().setFname("Anna");
+		user.getPerson().setLname("Navarre");
 		
 		tx = session.beginTransaction();
 

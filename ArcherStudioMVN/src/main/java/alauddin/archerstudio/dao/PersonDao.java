@@ -32,7 +32,7 @@ public class PersonDao {
 	 */
 	public Person getPerson(int userId){
 		Person p = null;
-		Query q = session.createQuery("FROM person WHERE userId = ?");
+		Query q = session.createQuery("FROM Person WHERE userId = ?");
 		q.setParameter(0, userId);
 		
 		p = (Person) q.uniqueResult();

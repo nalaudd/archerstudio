@@ -25,7 +25,7 @@ public class ScheduleDao {
 	 */
 	public WorkSchedule getWorkSchedule(int userId) {
 		WorkSchedule ws = null;
-		Query q = session.createQuery("FROM workschedule WHERE userId = ?");
+		Query q = session.createQuery("FROM WorkSchedule WHERE userId = ?");
 		q.setParameter(0, userId);
 		
 		ws = (WorkSchedule) q.uniqueResult();
@@ -40,7 +40,7 @@ public class ScheduleDao {
 	 */
 	public CustomSchedule getCustomSchedule(int userId) {
 		CustomSchedule cs = null;
-		Query q = session.createQuery("FROM customschedule WHERE userId = ?");
+		Query q = session.createQuery("FROM CustomSchedule WHERE userId = ?");
 		q.setParameter(0, userId);
 		
 		cs = (CustomSchedule) q.uniqueResult();

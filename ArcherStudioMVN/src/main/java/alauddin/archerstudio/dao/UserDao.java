@@ -25,7 +25,7 @@ public class UserDao {
 	 */
 	public User login(String username, String password){
 		User user = null;
-		Query q = session.createQuery("FROM users WHERE username = ? AND password = ?");
+		Query q = session.createQuery("FROM User WHERE username = ? AND password = ?");
 		
 		q.setParameter(0, username);
 		q.setParameter(1, password);
