@@ -7,6 +7,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
+/**
+ * Custom schedule that is similar to work schedule but not directed 
+ * towards work.
+ * @author Nasir Alauddin
+ *
+ */
 @Entity
 public class CustomSchedule {
 	

@@ -9,6 +9,12 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * User object that contains the user's username, password, and user ids.
+ * The ids point to the work schedule and custom schedule
+ * @author Nasir Alauddin
+ *
+ */
 @Entity
 @Table(name="Users")
 public class User {

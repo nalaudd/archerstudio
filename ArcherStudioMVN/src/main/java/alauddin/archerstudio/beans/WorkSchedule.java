@@ -7,6 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
+/**
+ * This is objects contains the work schedule for the user in the days of the week
+ * @author Nasir Alauddin
+ *
+ */
 @Entity
 public class WorkSchedule {
 	

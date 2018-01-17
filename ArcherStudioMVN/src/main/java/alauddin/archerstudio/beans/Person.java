@@ -10,8 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * Person object contains the user's first name, last name, age and birthday.
+ * @author Nasir Alauddin
+ *
+ */
 @Entity
-@Table(name = "Person")
+@Table(name = "People")
 public class Person {
 	
 	@Id
