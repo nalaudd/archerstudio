@@ -1,3 +1,8 @@
+/**
+ * Login component will only use one method which is the login from the login service.
+ * It will then store the user into the local storage to keep track of the session.
+ * @author Nasir Alauddin
+ */
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login-service/login-service.service';
 import { Login } from '../../models/Login';
@@ -22,10 +27,8 @@ export class LoginComponent implements OnInit {
   login(){
     this.loginBlock.username = this.username;
     this.loginBlock.password = this.password;
-    console.log('username: ' + this.username);
-    console.log('password: ' + this.password);
+    
     this.loginService.login(this.loginBlock).subscribe(data => {
-      console.log(JSON.stringify(data.json()));
       localStorage.setItem('currentUser', JSON.stringify(data.json()))
     })
     console.log();

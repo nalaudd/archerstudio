@@ -1,3 +1,12 @@
+/**
+ * The login service will have two methods login and log out.
+ * The login method will take the loginBlock object and hit the endpoint of a rest service to
+ * retreive a user object. If the user is valid it retrieve all the credentials.
+ * 
+ * The logout method will invalidate the user from local storage so no private information will 
+ * not be accessible to the inappropriate user.
+ * @author Nasir Alauddin
+ */
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { User } from '../../models/User';
