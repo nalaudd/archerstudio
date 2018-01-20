@@ -14,14 +14,16 @@ import { appRoutes } from './routes';
 
 // SERVICES
 
-import { LoginService } from './services/login-service/login-service.service'
+import { LoginService } from './services/login-service/login-service.service';
+import { NavbarComponent } from './components/navbar/navbar.component'
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
