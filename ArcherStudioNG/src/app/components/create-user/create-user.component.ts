@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserCreation } from '../../models/UserCreation';
+import { RegisterUserService } from '../../services/register-user/register-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-user',
@@ -15,7 +17,7 @@ export class CreateUserComponent implements OnInit {
   day: number;
   year: number;
 
-  constructor() { }
+  constructor(private rs: RegisterUserService, private router: Router) { }
 
   ngOnInit() {
     this.uc = new UserCreation();
@@ -27,7 +29,8 @@ export class CreateUserComponent implements OnInit {
     } else {
       this.birthday = this.year + '-' + this.month + '-' + this.day;
       this.uc.birthday = this.birthday;
-      console.log(this.uc);
+      this.rs.registerUser(this.uc);
+      this.router.navigateByUrl('/login');
     }
     
   }
