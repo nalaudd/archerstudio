@@ -23,7 +23,7 @@ public class UserDaoTest {
 	public void createUserTest(){
 		dao.open();
 		
-		dao.createUser("jcd", "bionicman", "JC", "Denton", 23, java.sql.Date.valueOf("1992-10-15"));
+		dao.createUser("jcd", "bionicman", "JC", "Denton", 23, "1992-10-15");
 		
 		User user = dao.login("jcd", "bionicman");
 		

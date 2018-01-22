@@ -45,7 +45,7 @@ public class UserDao {
 	 * Takes the inputs needed for a user and saves their data into tables
 	 * @param username, password, fname, lname, age, birthday
 	 */
-	public void createUser(String username, String password, String fname, String lname, int age, Date birthday){
+	public void createUser(String username, String password, String fname, String lname, int age, String birthday){
 		User user = new User();
 		user.setCs(new CustomSchedule());
 		user.setPerson(new Person());
@@ -60,7 +60,7 @@ public class UserDao {
 //		set user's personal info
 		user.getPerson().setFname(fname);
 		user.getPerson().setLname(lname);
-		user.getPerson().setBirthday(birthday);
+		user.getPerson().setBirthday(java.sql.Date.valueOf(birthday));
 		user.getPerson().setAge(age);
 		
 //		save user into tables

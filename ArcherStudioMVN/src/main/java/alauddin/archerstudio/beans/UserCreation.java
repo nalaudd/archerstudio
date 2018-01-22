@@ -3,9 +3,8 @@ package alauddin.archerstudio.beans;
 import java.sql.Date;
 
 public class UserCreation {
-	String fname, lname, username, password;
+	String fname, lname, username, password, birthday;
 	int age;
-	Date birthday;
 	
 	public String getFname() {
 		return fname;
@@ -37,10 +36,10 @@ public class UserCreation {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public Date getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
-	public void setBirthday(Date birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 	
