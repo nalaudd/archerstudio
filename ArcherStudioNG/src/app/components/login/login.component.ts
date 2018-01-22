@@ -30,10 +30,10 @@ export class LoginComponent implements OnInit {
     this.loginBlock.password = this.password;
     
     this.loginService.login(this.loginBlock).subscribe(data => {
-      localStorage.setItem('currentUser', JSON.stringify(data.json()))
+      localStorage.setItem('currentUser', JSON.stringify(data.json()));
+      this.router.navigateByUrl('#');
     })
 
-    this.router.navigateByUrl('#');
   }
 
 }

@@ -13,11 +13,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 // SERVICES
 
 import { LoginService } from './services/login-service/login-service.service';
-
 import { RegisterUserService } from './services/register-user/register-user.service';
 
 
@@ -26,7 +26,8 @@ import { RegisterUserService } from './services/register-user/register-user.serv
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
