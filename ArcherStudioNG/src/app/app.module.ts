@@ -15,7 +15,8 @@ import { appRoutes } from './routes';
 // SERVICES
 
 import { LoginService } from './services/login-service/login-service.service';
-import { NavbarComponent } from './components/navbar/navbar.component'
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CreateUserComponent } from './components/create-user/create-user.component'
 
 
 
@@ -23,7 +24,8 @@ import { NavbarComponent } from './components/navbar/navbar.component'
   declarations: [
     AppComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

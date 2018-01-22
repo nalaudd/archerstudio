@@ -4,7 +4,7 @@
         <a class="navbar-brand" href="#">Archer Studio</a>
       </div>
       <ul class="nav navbar-nav">
-        <li><a routerLink="login">Login</a></li>
+        <li *ngIf="!user"><a routerLink="/login">Login</a></li>
         <li *ngIf="user"><a (click)=logout()>Logout</a></li>
       </ul>
     </div>
