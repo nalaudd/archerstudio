@@ -14,7 +14,7 @@ import alauddin.archerstudio.util.HibernateUtil;
 @Path("/User")
 public class UpdateInfoService {
 	
-	public static Session session = new HibernateUtil().getSession();
+	public static Session session;
 	
 	/**
 	 * Takes an input of a user object and updates its changes in the
@@ -25,6 +25,7 @@ public class UpdateInfoService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/update")
 	public void update(User user){
+		session = new HibernateUtil().getSession();
 		Transaction tx = session.beginTransaction();
 		session.update(user.getCs());
 		session.update(user.getWs());
@@ -43,6 +44,7 @@ public class UpdateInfoService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/create")
 	public void createUser(User user){
+		session = new HibernateUtil().getSession();
 		Transaction tx = session.beginTransaction();
 		session.save(user);
 		session.save(user.getPerson());

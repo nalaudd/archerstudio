@@ -14,12 +14,13 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
 
 // SERVICES
 
 import { LoginService } from './services/login-service/login-service.service';
 import { RegisterUserService } from './services/register-user/register-user.service';
-
+import { SaveService } from './services/save/save.service'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegisterUserService } from './services/register-user/register-user.serv
     LoginComponent,
     NavbarComponent,
     CreateUserComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ScheduleComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,11 @@ import { RegisterUserService } from './services/register-user/register-user.serv
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [LoginService, RegisterUserService],
+  providers: [
+    LoginService,
+    RegisterUserService,
+    SaveService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

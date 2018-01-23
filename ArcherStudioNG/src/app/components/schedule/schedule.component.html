@@ -1,0 +1,241 @@
+<app-navbar></app-navbar>
+
+<!-- edit block -->
+<div class="container-fluid" *ngIf="editable" >
+  <div class="row">
+    <div class="col-md-6"><h2 style="color:crimson">Your Work Schedule</h2></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7"><hr></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Sunday: </div>
+    <div class="col-md-3"><input [(ngModel)]="sunstart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="sunend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Monday: </div>
+    <div class="col-md-3"><input [(ngModel)]="monstart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="monend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Tuesday: </div>
+    <div class="col-md-3"><input [(ngModel)]="tuestart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="tueend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Wednesday: </div>
+    <div class="col-md-3"><input [(ngModel)]="wedstart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="wedend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Thursday: </div>
+    <div class="col-md-3"><input [(ngModel)]="thustart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="thuend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Friday: </div>
+    <div class="col-md-3"><input [(ngModel)]="fristart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="friend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Saturday: </div>
+    <div class="col-md-3"><input [(ngModel)]="satstart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="satend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+
+  <!-- Custom Schedule -->
+
+  <div class="row">
+    <div class="col-md-6"><h2 style="color:crimson">Your Custom Schedule</h2></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7"><hr></div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1">Sunday: </div>
+    <div class="col-md-3"><input [(ngModel)]="csunstart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="csunend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Monday: </div>
+    <div class="col-md-3"><input [(ngModel)]="cmonstart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="cmonend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Tuesday: </div>
+    <div class="col-md-3"><input [(ngModel)]="ctuestart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="ctueend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Wednesday: </div>
+    <div class="col-md-3"><input [(ngModel)]="cwedstart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="cwedend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Thursday: </div>
+    <div class="col-md-3"><input [(ngModel)]="cthustart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="cthuend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Friday: </div>
+    <div class="col-md-3"><input [(ngModel)]="cfristart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="cfriend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Saturday: </div>
+    <div class="col-md-3"><input [(ngModel)]="csatstart" class="form-control mr-sm-2" type="text" placeholder="Start"></div>
+    <div class="col-md-3"><input [(ngModel)]="csatend" class="form-control mr-sm-2" type="text" placeholder="End"></div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-1"><input (click)=save() class="form-control mr-sm-2" type="button" value="Save" style="background-color:lime; color:white"></div>
+    <div class="col-md-1"><input (click)=edit() class="form-control mr-sm-2" type="button" value="Back" style="background-color:lime; color:white"></div>
+  </div>
+  <br><br>
+
+</div>
+
+<!-- view block -->
+
+<div class="container-fluid" *ngIf="!editable">
+  <div class="row">
+    <div class="col-md-6"><h2 style="color:crimson">Your Work Schedule</h2></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7"><hr></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Sunday: </div>
+    <div class="col-md-3">{{user.ws.sun}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Monday: </div>
+    <div class="col-md-3">{{user.ws.mon}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Tuesday: </div>
+    <div class="col-md-3">{{user.ws.tue}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Wednesday: </div>
+    <div class="col-md-3">{{user.ws.wed}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Thursday: </div>
+    <div class="col-md-3">{{user.ws.thu}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Friday: </div>
+    <div class="col-md-3">{{user.ws.fri}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Saturday: </div>
+    <div class="col-md-3">{{user.ws.sat}}</div>
+  </div>
+
+  <!-- Custom Schedule -->
+
+  <div class="row">
+    <div class="col-md-6"><h2 style="color:crimson">Your Custom Schedule</h2></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7"><hr></div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1">Sunday: </div>
+    <div class="col-md-3">{{user.cs.sun}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Monday: </div>
+    <div class="col-md-3">{{user.cs.mon}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Tuesday: </div>
+    <div class="col-md-3">{{user.cs.tue}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Wednesday: </div>
+    <div class="col-md-3">{{user.cs.wed}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Thursday: </div>
+    <div class="col-md-3">{{user.cs.thu}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Friday: </div>
+    <div class="col-md-3">{{user.cs.fri}}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-1">Saturday: </div>
+    <div class="col-md-3">{{user.cs.sat}}</div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-1"><input (click)=edit() class="form-control mr-sm-2" type="button" value="Edit" style="background-color:lime; color:white"></div>
+  </div>
+  <br><br>
+
+</div>
