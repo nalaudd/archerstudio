@@ -22,7 +22,14 @@ public class WorkSchedule {
 	
 	@Column
 	private String sun, mon, tue, wed, thu, fri, sat;
-
+	
+	public int getUserId() {
+		return userId;
+	}
+	
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	
 	public String getSun() {
 		return sun;

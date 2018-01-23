@@ -36,6 +36,13 @@ public class Person {
 	@Column
 	private Date birthday;
 	
+	public int getUserId() {
+		return userId;
+	}
+	
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	
 	public String getFname() {
 		return fname;

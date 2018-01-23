@@ -16,13 +16,13 @@ public class CreateTablesTest {
 		Transaction tx = null;
 		User user = new User();
 		
-		user.setUsername("anavarre");
-		user.setPassword("scryspc");
+		user.setUsername("jcd");
+		user.setPassword("bionicman");
 		user.setCs(new CustomSchedule());
 		user.setWs(new WorkSchedule());
 		user.setPerson(new Person());
-		user.getPerson().setFname("Anna");
-		user.getPerson().setLname("Navarre");
+		user.getPerson().setFname("JC");
+		user.getPerson().setLname("Denton");
 		
 		tx = session.beginTransaction();
 

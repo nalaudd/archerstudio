@@ -26,7 +26,7 @@ public class LoginService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/user")
-	public User login(Login log){
+	public final User login(Login log){
 		User user = null;
 		
 		dao.open();

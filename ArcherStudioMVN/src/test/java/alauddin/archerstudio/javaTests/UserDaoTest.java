@@ -14,7 +14,7 @@ public class UserDaoTest {
 	@Test
 	public void loginTest() {
 		dao.open();
-		User user = dao.login("anavarre", "scryspc");
+		User user = dao.login("jcd", "bionicman");
 		dao.close();
 		assertNotNull(user);
 	}
@@ -23,9 +23,9 @@ public class UserDaoTest {
 	public void createUserTest(){
 		dao.open();
 		
-		dao.createUser("jcd", "bionicman", "JC", "Denton", 23, "1992-10-15");
+		dao.createUser("jmanderley", "knight_killer", "Joseph", "Manderley", 23, "1992-10-15");
 		
-		User user = dao.login("jcd", "bionicman");
+		User user = dao.login("jmanderley", "knight_killer");
 		
 		assertNotNull(user);
 		

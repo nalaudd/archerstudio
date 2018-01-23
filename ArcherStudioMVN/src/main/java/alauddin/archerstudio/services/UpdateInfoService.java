@@ -26,6 +26,9 @@ public class UpdateInfoService {
 	@Path("/update")
 	public void update(User user){
 		Transaction tx = session.beginTransaction();
+		session.update(user.getCs());
+		session.update(user.getWs());
+		session.update(user.getPerson());
 		session.update(user);
 		tx.commit();
 		session.close();
