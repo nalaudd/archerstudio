@@ -26,15 +26,36 @@ public class UserInfoService {
 	 * @param user
 	 * @return Person or null
 	 */
-	@POST
+	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/Person")
-	public Person getPerson(User user){
+	@Path("/Person/{userId}")
+	public Person getPerson(@PathParam("userId") int userId){
 		Person person = null;
 		
 		pdao.open();
-		person =  pdao.getPerson(user.getUserId());
+		person =  pdao.getPerson(userId);
+		pdao.close();
+		
+		return person;
+	}
+	
+	/**
+	 * Based on the user's last name and first name the method gives the appropriate personal information
+	 * as a Person object
+	 * @param fname
+	 * @param lname
+	 * @return Person or null
+	 */
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/Person/{lname}/{fname}")
+	public Person getPerson(@PathParam("fname") String fname, @PathParam("lname") String lname){
+		Person person = null;
+		
+		pdao.open();
+		person =  pdao.getPerson(fname, lname);
 		pdao.close();
 		
 		return person;
