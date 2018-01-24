@@ -15,12 +15,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
+import { BirthdayComponent } from './components/birthday/birthday.component'
 
 // SERVICES
 
 import { LoginService } from './services/login-service/login-service.service';
 import { RegisterUserService } from './services/register-user/register-user.service';
-import { SaveService } from './services/save/save.service'
+import { SaveService } from './services/save/save.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SaveService } from './services/save/save.service'
     CreateUserComponent,
     WelcomeComponent,
     ScheduleComponent,
+    BirthdayComponent,
   ],
   imports: [
     BrowserModule,
