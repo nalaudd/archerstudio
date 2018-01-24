@@ -22,6 +22,7 @@ import { BirthdayComponent } from './components/birthday/birthday.component'
 import { LoginService } from './services/login-service/login-service.service';
 import { RegisterUserService } from './services/register-user/register-user.service';
 import { SaveService } from './services/save/save.service';
+import { SearchBirthdayService } from './services/search-birthday/search-birthday.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SaveService } from './services/save/save.service';
   providers: [
     LoginService,
     RegisterUserService,
-    SaveService
+    SaveService,
+    SearchBirthdayService
   ],
   bootstrap: [AppComponent]
 })
