@@ -3,6 +3,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { CreateUserComponent } from "./components/create-user/create-user.component";
 import { WelcomeComponent } from "./components/welcome/welcome.component";
 import { ScheduleComponent } from "./components/schedule/schedule.component";
+import { BirthdayComponent } from "./components/birthday/birthday.component";
 
 export const appRoutes: Routes = [
     {
@@ -20,5 +21,9 @@ export const appRoutes: Routes = [
     {
         path: 'schedule',
         component: ScheduleComponent
+    },
+    {
+        path: 'birthday-search',
+        component: BirthdayComponent
     }
 ]
