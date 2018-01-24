@@ -4,6 +4,7 @@ import { CreateUserComponent } from "./components/create-user/create-user.compon
 import { WelcomeComponent } from "./components/welcome/welcome.component";
 import { ScheduleComponent } from "./components/schedule/schedule.component";
 import { BirthdayComponent } from "./components/birthday/birthday.component";
+import { OtherScheduleComponent } from "./components/other-schedule/other-schedule.component";
 
 export const appRoutes: Routes = [
     {
@@ -25,5 +26,9 @@ export const appRoutes: Routes = [
     {
         path: 'birthday-search',
         component: BirthdayComponent
+    },
+    {
+        path: 'search-schedule',
+        component: OtherScheduleComponent
     }
 ]

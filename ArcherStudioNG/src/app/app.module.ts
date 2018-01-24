@@ -16,6 +16,7 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { BirthdayComponent } from './components/birthday/birthday.component'
+import { OtherScheduleComponent } from './components/other-schedule/other-schedule.component';
 
 // SERVICES
 
@@ -33,6 +34,7 @@ import { SearchBirthdayService } from './services/search-birthday/search-birthda
     WelcomeComponent,
     ScheduleComponent,
     BirthdayComponent,
+    OtherScheduleComponent,
   ],
   imports: [
     BrowserModule,

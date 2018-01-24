@@ -6,6 +6,7 @@
       <ul class="nav navbar-nav">
         <li *ngIf="!user"><a routerLink="/login">Login</a></li>
         <li *ngIf="user"><a routerLink="/schedule">My Schedule</a></li>
+        <li *ngIf="user"><a routerLink="/search-schedule">Search Other Schedule</a></li>
         <li *ngIf="user"><a routerLink="/birthday-search">Check Birthdays</a></li>
         <li *ngIf="user"><a (click)=logout()>Logout</a></li>
       </ul>
