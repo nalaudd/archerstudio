@@ -1,4 +1,102 @@
 <app-navbar></app-navbar>
-<p>
-  other-schedule works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6"><h3>Search for other Schedules</h3></div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-2"><input min="1" name="userId" [(ngModel)]="userId" class="form-control mr-md-3" type="number" placeholder="User ID"></div>
+      <div class="col-md-2"><input (click)=search() style="color:white; background-color:lime" class="form-control mr-md-3" type="button" value="Search"></div>
+  </div>
+
+  <!-- Work Schedule -->
+
+  <div class="row">
+    <div class="col-md-6"><h3>Work Schedule</h3></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6"><hr></div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-1">Sunday: </div>
+    <div class="col-md-2">{{schedule.ws.sun}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Monday: </div>
+    <div class="col-md-2">{{schedule.ws.mon}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Tuesday: </div>
+    <div class="col-md-2">{{schedule.ws.tue}}</div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-1">Wednesday: </div>
+    <div class="col-md-2">{{schedule.ws.wed}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Thursday: </div>
+    <div class="col-md-2">{{schedule.ws.thu}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Friday: </div>
+    <div class="col-md-2">{{schedule.ws.fri}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Saturday: </div>
+    <div class="col-md-2">{{schedule.ws.sat}}</div>
+  </div>
+
+  <!-- Custom Schedule -->
+  <div class="row">
+    <div class="col-md-6"><h3>Custom Schedule</h3></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6"><hr></div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-1">Sunday: </div>
+    <div class="col-md-2">{{schedule.cs.sun}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Monday: </div>
+    <div class="col-md-2">{{schedule.cs.mon}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Tuesday: </div>
+    <div class="col-md-2">{{schedule.cs.tue}}</div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-1">Wednesday: </div>
+    <div class="col-md-2">{{schedule.cs.wed}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Thursday: </div>
+    <div class="col-md-2">{{schedule.cs.thu}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Friday: </div>
+    <div class="col-md-2">{{schedule.cs.fri}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">Saturday: </div>
+    <div class="col-md-2">{{schedule.cs.sat}}</div>
+  </div>
+
+  <br><br>
+</div>
